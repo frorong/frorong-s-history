@@ -1,0 +1,22 @@
+{
+  "plugins": ["eslint-plugin-svelte3"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+    },
+  },
+  "rules": {
+    "semi": "error",
+    "arrow-body-style": ["error", "as-needed"],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["../"],
+      },
+    ],
+    "no-console": "error",
+    "no-unused-vars": "error",
+  },
+}
