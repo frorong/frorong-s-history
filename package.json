@@ -30,6 +30,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@typescript-eslint/parser": "^7.4.0",
     "mongodb": "^6.5.0"
   }
 }
