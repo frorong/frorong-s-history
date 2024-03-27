@@ -5,7 +5,7 @@ async function getHistories() {
   let histories: HistoryType[] = []
 
   const paths = import.meta.glob(
-    '/src/posts/*.md',
+    '/src/histories/*.md',
     { eager: true }
   )
 
