@@ -1,18 +1,13 @@
 ---
-title: Second Post of Markdown Blog
-description: this is my second post
+companyName: 팀 스파르타
+description: 팀 스파르타에 지원 했었습니다.
 date: '2023-7-30'
-categories:
-  - sveltekit
-  - svelte
-  - second
-published: true
+id: 1
+status: INTERVIEW_FAILED
 ---
 
-## Svelte
+## 팀 스파르타
 
 **static** 폴더에 있는 파일은 `/` 경로로 서빙되기 때문에
 
 아래와 같이 블로그에서 그대로 불러올 수 있습니다.
-
-![Svelte](favicon.png)

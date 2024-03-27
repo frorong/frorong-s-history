@@ -10,7 +10,7 @@ async function getHistories() {
   )
 
   for (const path in paths) {
-    const file = paths[path]
+    const file = paths[path] as any
     const slug = path
       .split('/')
       .at(-1)
@@ -19,7 +19,6 @@ async function getHistories() {
     if (
       file &&
       typeof file === 'object' &&
-      'metadata' in file &&
       slug
     ) {
       const metadata =
@@ -31,9 +30,7 @@ async function getHistories() {
         ...metadata,
         slug,
       } satisfies HistoryType
-      console.log(history)
-      history.published &&
-        histories.push(history)
+      histories.push(history)
     }
   }
 
