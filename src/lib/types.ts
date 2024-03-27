@@ -11,4 +11,6 @@ export interface HistoryType {
   date: Date
   id: number
   status: Status
+  slug: string
+  published: boolean
 }
