@@ -9,6 +9,8 @@ async function getHistories() {
     { eager: true }
   )
 
+  console.log(paths)
+
   for (const path in paths) {
     const file = paths[path] as any
     const slug = path

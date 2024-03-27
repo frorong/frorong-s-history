@@ -1,7 +1,7 @@
 <script lang="ts">
   // import '../app.postcss'
   // import './prism.css'
-  import Header from '../components/header.svelte'
+  import Header from '@components/header.svelte'
 </script>
 
 <div
