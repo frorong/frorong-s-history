@@ -1,15 +1,13 @@
 import { json } from '@sveltejs/kit'
-import type { HistoryType } from '$lib/types'
+import type { BlogType } from '$lib/types'
 
-async function getHistories() {
-  let histories: HistoryType[] = []
+async function getBlogs() {
+  let blogs: BlogType[] = []
 
   const paths = import.meta.glob(
-    '/src/histories/*.md',
+    '/src/blogs/*.md',
     { eager: true }
   )
-
-  console.log(paths)
 
   for (const path in paths) {
     const file = paths[path] as any
@@ -25,27 +23,27 @@ async function getHistories() {
     ) {
       const metadata =
         file.metadata as Omit<
-          HistoryType,
+          BlogType,
           'slug'
         >
-      const history = {
+      const blog = {
         ...metadata,
         slug,
-      } satisfies HistoryType
-      histories.push(history)
+      } satisfies BlogType
+      blogs.push(blog)
     }
   }
 
-  histories = histories.sort(
+  blogs = blogs.sort(
     (first, second) =>
       new Date(second.date).getTime() -
       new Date(first.date).getTime()
   )
 
-  return histories
+  return blogs
 }
 
 export async function GET() {
-  const histories = await getHistories()
-  return json(histories)
+  const blogs = await getBlogs()
+  return json(blogs)
 }
