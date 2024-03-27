@@ -5,7 +5,7 @@ async function getBlogs() {
   let blogs: BlogType[] = []
 
   const paths = import.meta.glob(
-    '/src/blogs/*.md',
+    '/src/constant/blogs/*.md',
     { eager: true }
   )
 
