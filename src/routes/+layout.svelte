@@ -9,7 +9,7 @@
 >
   <Header />
   <main
-    class="flex flex-col w-full items-center"
+    class="flex w-full flex-col items-center"
   >
     <slot />
   </main>
