@@ -16,7 +16,10 @@ const config = {
     adapter: adapter(),
   },
 
-  preprocess: preprocess(),
+  preprocess: [
+    preprocess(),
+    vitePreprocess({}),
+  ],
 }
 
 export default config
