@@ -1,48 +1,48 @@
-import { tutorials } from '$db/tutorials'
+// import { tutorials } from '$db/tutorials'
 
-import type { PageServerLoad } from './$types'
+// import type { PageServerLoad } from './$types'
 
-export const load: PageServerLoad =
-  async function () {
-    console.log('>>>> start')
+// export const load: PageServerLoad =
+//   async function () {
+//     console.log('>>>> start')
 
-    const data = await tutorials
+//     const data = await tutorials
 
-      .find(
-        {},
+//       .find(
+//         {},
 
-        {
-          projection: {
-            _id: String,
+//         {
+//           projection: {
+//             _id: String,
 
-            title: String,
+//             title: String,
 
-            state: Number,
-          },
-        }
-      )
+//             state: Number,
+//           },
+//         }
+//       )
 
-      .toArray()
+//       .toArray()
 
-    data.forEach((item) => {
-      console.log(
-        '>>>> title : ' + item.title
-      )
+//     data.forEach((item) => {
+//       console.log(
+//         '>>>> title : ' + item.title
+//       )
 
-      if (item.title.length > 14) {
-        item.length =
-          item.title.length * 0.7
-      } else {
-        item.length =
-          item.title.length * 0.8
-      }
-    })
+//       if (item.title.length > 14) {
+//         item.length =
+//           item.title.length * 0.7
+//       } else {
+//         item.length =
+//           item.title.length * 0.8
+//       }
+//     })
 
-    const loadData = JSON.parse(
-      JSON.stringify(data)
-    )
+//     const loadData = JSON.parse(
+//       JSON.stringify(data)
+//     )
 
-    return {
-      tutorials: loadData,
-    }
-  }
+//     return {
+//       tutorials: loadData,
+//     }
+//   }

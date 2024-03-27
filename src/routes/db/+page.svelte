@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
   import { onMount } from 'svelte'
   import type { PageData } from './$types'
 
@@ -10,4 +10,4 @@
   )
 </script>
 
-<h1>test</h1>
+<h1>test</h1> -->
