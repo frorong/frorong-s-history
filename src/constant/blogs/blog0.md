@@ -6,7 +6,7 @@ date: '2024-02-20'
 category: CS
 ---
 
-**\[CS\] TCP 원리. 왜 TCP는 UDP보다 느릴까?**
+# \[CS\] TCP 원리. 왜 TCP는 UDP보다 느릴까?
 
 <img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FYJ7pt%2FbtsE9JX36zT%2Fhb4ymhSFzzitfRO1ACtT91%2Fimg.png'/>
 
