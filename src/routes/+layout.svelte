@@ -15,10 +15,6 @@
     property="og:title"
     content="Frorong's history"
   />
-  <meta
-    property="og:image"
-    content="%sveltekit.assets%/openGraph.png"
-  />
 </svelte:head>
 
 <div
