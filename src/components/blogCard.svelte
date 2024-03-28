@@ -4,7 +4,7 @@
 </script>
 
 <div
-  class="mb-8 rounded-md bg-white p-6 shadow-md"
+  class="mb-8 max-w-2xl rounded-md bg-white p-6 shadow-md"
 >
   <a
     href="{`/blog/${blog.slug}`}"
