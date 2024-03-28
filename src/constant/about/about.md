@@ -17,6 +17,10 @@
 사용자 피드백 - https://righteous-cook-28b.notion.site/3fee99128c50478ea933d7d6248ddbfe
 
 <br/>
+
+[여기에서 노션 포트폴리오 확인이 가능합니다.](https://righteous-cook-28b.notion.site/1e46c4a5c6f141ceb65d78a64ed4ade2?pvs=4)
+
+<br/>
 <br/>
 
 ---
