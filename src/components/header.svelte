@@ -24,14 +24,14 @@
     <b>Home</b>
   </a>
   <a
-    href="{PATHS.ABOUT}"
-    class="{`${path === PATHS.ABOUT && 'font-bold text-blue-700'} text-xl`}"
-    >About</a
-  >
-  <a
     href="{PATHS.BLOG}"
     class="{`${path === PATHS.BLOG && 'font-bold text-blue-700'} text-xl`}"
     >Blog</a
+  >
+  <a
+    href="{PATHS.ABOUT}"
+    class="{`${path === PATHS.ABOUT && 'font-bold text-blue-700'} text-xl`}"
+    >About</a
   >
 </nav>
 

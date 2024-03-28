@@ -3,13 +3,13 @@
   export let blog: BlogType
 </script>
 
-<div
-  class="mb-8 rounded-md bg-white p-6 shadow-md"
+<a
+  href="{`/blog/${blog.slug}`}"
+  class="mb-8 max-w-2xl transform rounded-md bg-white p-6 shadow-md transition-transform duration-300 ease-in-out hover:scale-105"
 >
-  <a
-    href="{`/blog/${blog.slug}`}"
+  <span
     class="mb-2 block text-lg font-semibold text-blue-700 hover:underline"
-    >{blog.title}</a
+    >{blog.title}</span
   >
   <p class="text-gray-700">
     {blog.description}
@@ -17,7 +17,7 @@
   <p class="mt-2 text-sm text-gray-500">
     On: {blog.date}
   </p>
-</div>
+</a>
 
 <style>
   .bg-white {

@@ -15,6 +15,7 @@
     <div
       class="mt-8 flex flex-col space-y-10"
     >
+      <span></span>
       {#each data.blogs as blog (blog.id)}
         <BlogCard blog="{blog}" />
       {/each}
