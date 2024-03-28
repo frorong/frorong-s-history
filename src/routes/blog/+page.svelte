@@ -10,7 +10,7 @@
     <h1
       class="text-2xl font-semibold capitalize"
     >
-      My blog Lists
+      Frorong's blog
     </h1>
     <div
       class="mt-8 flex flex-col space-y-10"
