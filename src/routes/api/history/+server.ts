@@ -5,11 +5,9 @@ async function getHistories() {
   let histories: HistoryType[] = []
 
   const paths = import.meta.glob(
-    '/src/histories/*.md',
+    '/src/constant/histories/*.md',
     { eager: true }
   )
-
-  console.log(paths)
 
   for (const path in paths) {
     const file = paths[path] as any

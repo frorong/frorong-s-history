@@ -1,8 +1,9 @@
 ---
-id: 2
-companyName: \[CS\] IP가 무엇인가요?
+id: 1
+title: IP가 무엇인가요?
 description: IP가 무엇인지 알아보고, 컴퓨터의 주소는 어떤 것이 있는지 이해합시다.
 date: '2024-03-17'
+category: CS
 ---
 
 **\[CS\] IP가 무엇인가요?**
@@ -47,11 +48,7 @@ TCP는 데이터의 신뢰성있는 전송을 담당한다. TCP와 IP는 서로 
 
 더 자세한 과정은 아래 글에서 확인하자.
 
-[\[CS\] TCP 원리. 왜 TCP는 UDP보다 느릴까?
-
-\[CS\] TCP 원리. 왜 TCP는 UDP보다 느릴까? tcp/ip 연결 이후에 클라이언트에서 서버로 어떠한 요청을 한다면, 서버는 그에 대한 응답을 보내준다. 여기까지는 많은 사람들이 알고 있는 내용이다. 그런
-
-frorong.tistory.com](https://frorong.tistory.com/entry/CS-TCP-%EC%9B%90%EB%A6%AC-%EC%99%9C-TCP%EB%8A%94-UDP%EB%B3%B4%EB%8B%A4-%EB%8A%90%EB%A6%B4%EA%B9%8C)
+[frorong.tistory.com](https://frorong.tistory.com/entry/CS-TCP-%EC%9B%90%EB%A6%AC-%EC%99%9C-TCP%EB%8A%94-UDP%EB%B3%B4%EB%8B%A4-%EB%8A%90%EB%A6%B4%EA%B9%8C)
 
 ## 주소
 
@@ -61,7 +58,7 @@ OSI 7계층과 주소를 그림으로 나타내면 아래 처럼 될 것이다.
 
 물리, 데이터링크 계층에 MAC 주소, 네트워크 계층에 IP주소, 전송 계층에 Port 번호.
 
-[##_Image|kage@KNpnj/btsFQUrPnjz/HG72wVOzkKx7RWIwB6W090/img.png|CDM|1.3|{"originWidth":1064,"originHeight":1032,"style":"alignCenter","width":400,"height":388}_##]
+<img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKNpnj%2FbtsFQUrPnjz%2FHG72wVOzkKx7RWIwB6W090%2Fimg.png'/>
 
 먼저 MAC 주소는 NIC, 네트워크 인터페이스 카드에 대한 식별자이다. 쉽게 이야기하면 LAN 카드이다.
 
