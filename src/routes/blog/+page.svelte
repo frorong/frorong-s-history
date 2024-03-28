@@ -1,4 +1,5 @@
 <script lang="ts">
+  import BlogCard from '@components/blogCard.svelte'
   export let data
 </script>
 
@@ -15,27 +16,7 @@
       class="mt-8 flex flex-col space-y-10"
     >
       {#each data.blogs as blog (blog.id)}
-        <div
-          class="mb-4 rounded-md border border-gray-200 p-4 shadow-md"
-        >
-          <a
-            href="{blog.slug}"
-            class="text-lg font-semibold hover:underline"
-            >{blog.title}</a
-          >
-          {#if blog.description}
-            <p
-              class="mt-2 text-gray-700"
-            >
-              {blog.description}
-            </p>
-          {/if}
-          <p
-            class="mt-2 text-sm text-gray-500"
-          >
-            On: {blog.date}
-          </p>
-        </div>
+        <BlogCard blog="{blog}" />
       {/each}
     </div>
   </div>

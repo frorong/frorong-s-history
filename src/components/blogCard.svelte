@@ -7,7 +7,7 @@
   class="mb-8 rounded-md bg-white p-6 shadow-md"
 >
   <a
-    href="javascript:void(0);"
+    href="{`/blog/${blog.slug}`}"
     class="mb-2 block text-lg font-semibold text-blue-700 hover:underline"
     >{blog.title}</a
   >
