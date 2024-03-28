@@ -15,7 +15,7 @@
 </script>
 
 <button
-  class="fixed bottom-4 right-4 rounded-full bg-blue-500 px-4 py-2 text-white shadow-md transition duration-300 hover:bg-blue-600"
+  class="fixed bottom-16 right-16 rounded-full bg-blue-500 px-4 py-2 text-white shadow-md transition duration-300 hover:bg-blue-600"
   on:click="{scrollToTop}"
 >
   <svg

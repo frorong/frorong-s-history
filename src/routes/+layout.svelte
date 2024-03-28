@@ -2,6 +2,7 @@
   import '../app.postcss'
   import '../prism.css'
   import Header from '@components/header.svelte'
+  import ScrollToTopButton from '@components/scrollToTopButton.svelte'
 </script>
 
 <div
@@ -12,5 +13,6 @@
     class="flex w-full flex-col items-center"
   >
     <slot />
+    <ScrollToTopButton />
   </main>
 </div>
