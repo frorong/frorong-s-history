@@ -1,7 +1,7 @@
 ---
 id: 8
-title: http, https. 대칭키, 비대칭키. 8가지의 알고리즘을 이해해자!
-description: 컴퓨터 시스템 일반 과목에 속하는 scheduling에 대해 이해하자.
+title: http, https. 대칭키, 비대칭키.
+description: http 프로토콜로 통신을 하긴 하는데, 어떤 원리로 이루어지는거지? 속 까지 알아봐야 하지 않겠어?
 date: '2024-02-02'
 category: CS
 ---
