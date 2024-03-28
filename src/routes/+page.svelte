@@ -9,9 +9,9 @@
     <h1
       class="text-2xl font-semibold capitalize"
     >
-      My history Lists
+      메인 페이지는 업데이트 예정입니다.
     </h1>
-    <div
+    <!-- <div
       class="mt-8 flex flex-col space-y-10"
     >
       {#each data.histories as history (history.id)}
@@ -63,5 +63,6 @@
         </div>
       {/each}
     </div>
+  </div> -->
   </div>
 </section>
