@@ -11,7 +11,7 @@ export async function load({
 }) {
   try {
     const post = await import(
-      `../../histories/${params.slug}.md`
+      `../../constant/histories/${params.slug}.md`
     )
 
     return {
