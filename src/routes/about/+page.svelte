@@ -5,6 +5,6 @@
     About
   </h1>
   <p class="text-lg">
-    This is About Page of SvelteKit!
+    이승제가 만든 서비스입니다.
   </p>
 </section>
