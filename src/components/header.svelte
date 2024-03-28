@@ -6,25 +6,31 @@
   page.subscribe(($page) => {
     path = $page.url.pathname
   })
+
+  enum PATHS {
+    MAIN = '/',
+    ABOUT = '/about',
+    BLOG = '/blog',
+  }
 </script>
 
 <nav
   class="flex justify-start space-x-8 sm:ml-28"
 >
   <a
-    href="/"
-    class="{`${path === '/' && 'font-bold text-blue-700'} text-xl`}"
+    href="{PATHS.MAIN}"
+    class="{`${path === PATHS.MAIN && 'font-bold text-blue-700'} text-xl`}"
   >
     <b>Home</b>
   </a>
   <a
-    href="/about"
-    class="{`${path === '/about' && 'font-bold text-blue-700'} text-xl`}"
+    href="{PATHS.ABOUT}"
+    class="{`${path === PATHS.ABOUT && 'font-bold text-blue-700'} text-xl`}"
     >About</a
   >
   <a
-    href="/blog"
-    class="{`${path === '/blog' && 'font-bold text-blue-700'} text-xl`}"
+    href="{PATHS.BLOG}"
+    class="{`${path === PATHS.BLOG && 'font-bold text-blue-700'} text-xl`}"
     >Blog</a
   >
 </nav>
