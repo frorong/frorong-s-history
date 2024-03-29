@@ -5,6 +5,11 @@
   import ScrollToTopButton from '@components/scrollToTopButton.svelte'
 
   import { page } from '$app/stores'
+
+  import {
+    signIn,
+    signOut,
+  } from '@auth/sveltekit/client'
 </script>
 
 <svelte:head>
@@ -66,6 +71,16 @@
       >
         Sign in
       </a>
+
+      <div class="actions">
+        <div class="wrapper-form">
+          <button
+            on:click="{() =>
+              signIn('github')}"
+            >Sign In with GitHub</button
+          >
+        </div>
+      </div>
     {/if}
   </div>
   <Header />
