@@ -6,7 +6,12 @@
     signOut,
   } from '@auth/sveltekit/client'
 
+  if ($page.data.session) {
+    console.log($page.data.session.user)
+  }
+
   import GithubLoginButton from '@components/githubLoginButton.svelte'
+  import LogoutButton from '@components/logoutButton.svelte'
 </script>
 
 <section>
@@ -24,36 +29,28 @@
           ></span>
         {/if}
 
+        <h1>
+          {$page.data.session.user
+            ?.name ?? '익명의 유저'}님
+          안녕하세요!
+        </h1>
+
         <span>
-          <small>Signed in as</small>
-          <br />
-          <strong>
-            {$page.data.session.user
-              ?.email ??
-              $page.data.session.user
-                ?.name}
-          </strong>
+          email: {$page.data.session
+            .user?.email ??
+            'email이 존재하지 않습니다.'}
         </span>
 
-        <a
-          href="/auth/signout"
-          class="button"
-          data-sveltekit-preload-data="off"
-        >
-          Sign out
-        </a>
+        <LogoutButton
+          onClick="{() =>
+            signOut({
+              callbackUrl: '/',
+            })}"
+        />
       {:else}
-        <span class="notSignedInText">
-          You are not signed in
+        <span>
+          아직 로그인하지 않았습니다!
         </span>
-
-        <a
-          href="/auth/signin"
-          class="buttonPrimary"
-          data-sveltekit-preload-data="off"
-        >
-          Sign in
-        </a>
 
         <GithubLoginButton
           onClick="{() =>
