@@ -6,10 +6,6 @@
     signOut,
   } from '@auth/sveltekit/client'
 
-  if ($page.data.session) {
-    console.log($page.data.session.user)
-  }
-
   import GithubLoginButton from '@components/githubLoginButton.svelte'
   import LogoutButton from '@components/logoutButton.svelte'
 </script>
