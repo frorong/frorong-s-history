@@ -20,37 +20,56 @@
   >
     <div>
       {#if $page.data.session}
-        {#if $page.data.session.user?.image}
-          <span
-            style="background-image: url('{$page
-              .data.session.user
-              .image}')"
-            class="avatar"
-          ></span>
-        {/if}
-
-        <h1>
-          {$page.data.session.user
-            ?.name ?? '익명의 유저'}님
-          안녕하세요!
-        </h1>
-
-        <span>
-          email: {$page.data.session
-            .user?.email ??
-            'email이 존재하지 않습니다.'}
-        </span>
-
-        <LogoutButton
-          onClick="{() =>
-            signOut({
-              callbackUrl: '/',
-            })}"
-        />
+        <div
+          class="flex items-center space-x-4"
+        >
+          {#if $page.data.session.user?.image}
+            <div
+              class="h-12 w-12 rounded-full bg-gray-300"
+              style="background-image: url('{$page
+                .data.session.user
+                .image}')"
+            ></div>
+          {/if}
+          <div>
+            <h1
+              class="text-xl font-semibold"
+            >
+              {$page.data.session.user
+                ?.name ??
+                '익명의 유저'}님
+              안녕하세요!
+            </h1>
+            <p class="text-gray-600">
+              email: {$page.data.session
+                .user?.email ??
+                'email이 존재하지 않습니다.'}
+            </p>
+          </div>
+          <div>
+            <LogoutButton
+              onClick="{() =>
+                signOut({
+                  callbackUrl: '/',
+                })}"
+            >
+              로그아웃
+            </LogoutButton>
+          </div>
+        </div>
       {:else}
-        <span>
-          아직 로그인하지 않았습니다!
-        </span>
+        <div
+          class="border-l-4 border-blue-500 bg-blue-100 p-4 text-blue-800"
+          role="alert"
+        >
+          <p class="font-bold">
+            아직 로그인하지 않았습니다!
+          </p>
+          <p>
+            커뮤니티를 이용하기 위해서는
+            로그인이 필요합니다.
+          </p>
+        </div>
 
         <GithubLoginButton
           onClick="{() =>
