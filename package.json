@@ -11,6 +11,8 @@
     "format": "pnpx prettier --write \"src/**/*.svelte\""
   },
   "devDependencies": {
+    "@auth/core": "^0.28.1",
+    "@auth/sveltekit": "^0.14.1",
     "@fontsource/fira-mono": "^4.5.10",
     "@neoconfetti/svelte": "^1.0.0",
     "@sveltejs/adapter-auto": "^3.0.0",
@@ -38,7 +40,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@auth/sveltekit": "^0.14.1",
     "@typescript-eslint/parser": "^7.4.0",
     "mongodb": "^6.5.0"
   }
