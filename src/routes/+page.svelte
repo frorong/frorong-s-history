@@ -24,12 +24,12 @@
           class="flex items-center space-x-4"
         >
           {#if $page.data.session.user?.image}
-            <div
-              class="h-12 w-12 rounded-full bg-gray-300"
-              style="background-image: url('{$page
-                .data.session.user
-                .image}')"
-            ></div>
+            <img
+              src="{$page.data.session
+                .user.image}"
+              alt="프로필 이미지"
+              class="h-12 w-12 rounded-full"
+            />
           {/if}
           <div>
             <h1
@@ -70,6 +70,10 @@
             로그인이 필요합니다.
           </p>
         </div>
+
+        <div
+          class="my-8 h-px w-full bg-slate-400"
+        ></div>
 
         <GithubLoginButton
           onClick="{() =>
