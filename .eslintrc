@@ -14,12 +14,6 @@
       "error",
       "as-needed",
     ],
-    "no-restricted-imports": [
-      "error",
-      {
-        "patterns": ["../"],
-      },
-    ],
     "no-console": "error",
     "no-unused-vars": "error",
   },
