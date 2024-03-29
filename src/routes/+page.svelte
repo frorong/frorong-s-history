@@ -1,16 +1,66 @@
 <script lang="ts">
   export let data
+  import { page } from '$app/stores'
+  import {
+    signIn,
+    signOut,
+  } from '@auth/sveltekit/client'
+
+  import GithubLoginButton from '@components/githubLoginButton.svelte'
 </script>
 
 <section>
   <div
     class="container mx-auto px-6 py-10"
   >
-    <h1
-      class="text-2xl font-semibold capitalize"
-    >
-      메인 페이지는 업데이트 예정입니다.
-    </h1>
+    <div>
+      {#if $page.data.session}
+        {#if $page.data.session.user?.image}
+          <span
+            style="background-image: url('{$page
+              .data.session.user
+              .image}')"
+            class="avatar"
+          ></span>
+        {/if}
+
+        <span>
+          <small>Signed in as</small>
+          <br />
+          <strong>
+            {$page.data.session.user
+              ?.email ??
+              $page.data.session.user
+                ?.name}
+          </strong>
+        </span>
+
+        <a
+          href="/auth/signout"
+          class="button"
+          data-sveltekit-preload-data="off"
+        >
+          Sign out
+        </a>
+      {:else}
+        <span class="notSignedInText">
+          You are not signed in
+        </span>
+
+        <a
+          href="/auth/signin"
+          class="buttonPrimary"
+          data-sveltekit-preload-data="off"
+        >
+          Sign in
+        </a>
+
+        <GithubLoginButton
+          onClick="{() =>
+            signIn('github')}"
+        />
+      {/if}
+    </div>
     <!-- <div
       class="mt-8 flex flex-col space-y-10"
     >
