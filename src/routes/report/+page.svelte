@@ -34,6 +34,10 @@
       event.target as HTMLInputElement
     title = target.value
   }
+
+  if (isExistCookie('isSuccess'))
+    window.location.href =
+      window.location.href + '/success'
 </script>
 
 <section>
@@ -54,10 +58,9 @@
             isExistCookie('isSuccess')
           ) {
             e.preventDefault()
-            alert('test')
-            window.location.href =
-              window.location.href +
-              '/success'
+            alert(
+              '문의는 5분에 1번씩 가능합니다.'
+            )
           }
           console.log(
             isExistCookie('isSuccess'),
