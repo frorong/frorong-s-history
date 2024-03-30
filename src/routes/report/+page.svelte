@@ -71,7 +71,7 @@
             alert('장난 치지 마세요.')
           } else
             document.cookie =
-              'isSuccess=true; max-age=5'
+              'isSuccess=true; max-age=300'
         }}"
       >
         <input
