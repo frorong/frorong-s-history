@@ -4,14 +4,14 @@ import type { PageServerLoad } from './$types'
 import { GOOGLE_EMAIL } from '$env/static/private'
 import transporter from '$lib/emailSetup.server.js'
 
-// export const load: PageServerLoad =
-//   async (event) => {
-//     const session =
-//       await event.locals.auth()
-//     if (!session?.user)
-//       throw redirect(303, '/auth')
-//     return {}
-//   }
+export const load: PageServerLoad =
+  async (event) => {
+    const session =
+      await event.locals.auth()
+    if (!session?.user)
+      throw redirect(303, '/auth')
+    return {}
+  }
 
 export const actions = {
   default: async ({
