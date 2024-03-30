@@ -1,4 +1,4 @@
-// import { redirect } from '@sveltejs/kit'
+import { redirect } from '@sveltejs/kit'
 // import type { PageServerLoad } from './$types'
 
 import { GOOGLE_EMAIL } from '$env/static/private'
@@ -37,7 +37,7 @@ export const actions = {
         to: 'frorong0727@gmail.com',
         bcc: 'https://www.frorong.shop',
         subject: subject,
-        text: body,
+        text: body + session.user.name,
         html: html,
       }
 
