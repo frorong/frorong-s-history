@@ -16,8 +16,10 @@ import transporter from '$lib/emailSetup.server.js'
 export const actions = {
   default: async ({
     request,
+    context,
   }: {
     request: any
+    context: any
   }) => {
     try {
       const formData =
@@ -73,6 +75,8 @@ export const actions = {
 
       await sendEmail(message)
 
+      context.page.path =
+        '/report/success'
       redirect(200, '/report/success')
     } catch (error) {
       // eslint-disable-next-line no-console

@@ -9,6 +9,8 @@
 
   let message: string = ''
   let title: string = ''
+  let name: string = ''
+  let email: string = ''
 
   const handleMessageInput = (
     event: Event
@@ -16,6 +18,13 @@
     const target =
       event.target as HTMLTextAreaElement
     message = target.value
+
+    if ($page.data.session)
+      name = $page.data.session.user
+        ?.name as string
+    if ($page.data.session)
+      email = $page.data.session.user
+        ?.email as string
   }
 
   const handleTitleInput = (
@@ -84,14 +93,14 @@
         </button>
         <input
           name="userName"
-          value="{$page.data.session
-            .user}"
+          bind:value="{name}"
           disabled
+          class="opacity-0"
         />
         <input
+          bind:value="{email}"
           name="userEmail"
-          value="{$page.data.session
-            .user?.email}"
+          class="opacity-0"
           disabled
         />
       </form>
