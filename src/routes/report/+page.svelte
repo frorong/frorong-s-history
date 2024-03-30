@@ -62,13 +62,11 @@
               '문의는 5분에 1번씩 가능합니다.'
             )
           }
-          console.log(
-            isExistCookie('isSuccess'),
-            name
-          )
           if (
-            message.length < 5 ||
-            title.length < 5
+            message.replaceAll(' ', '')
+              .length < 5 ||
+            title.replaceAll(' ', '')
+              .length < 5
           ) {
             e.preventDefault()
             alert('장난 치지 마세요.')
@@ -90,6 +88,7 @@
           class="w-full rounded-md border p-2"
           rows="5"
           placeholder="문의 내용을 입력해주세요."
+          maxlength="{1000}"
           bind:value="{message}"
           on:input="{handleMessageInput}"
         ></textarea>
