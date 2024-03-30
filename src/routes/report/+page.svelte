@@ -1,6 +1,7 @@
 <script lang="ts">
   export let data
   import { page } from '$app/stores'
+  import isExistCookie from '$lib/isExistCookie.js'
 
   export let form
   import { signIn } from '@auth/sveltekit/client'
@@ -37,7 +38,22 @@
     <div
       class="flex items-center space-x-4"
     >
-      <form method="POST">
+      <form
+        method="POST"
+        on:submit="{(e) => {
+          if (
+            isExistCookie(
+              'isSuccess'
+            ) ||
+            message.length < 5 ||
+            title.length < 5
+          )
+            e.preventDefault()
+          else
+            document.cookie =
+              'isSuccess=true; max-age=5'
+        }}"
+      >
         <input
           name="subject"
           type="text"

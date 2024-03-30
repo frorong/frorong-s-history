@@ -30,6 +30,12 @@ export const actions = {
       const body = formData.get('body')
       let html = `<h2>문의가 도착했습니다.</h2><pre>${body}</pre>`
 
+      if (
+        body.length < 5 ||
+        subject.length < 5
+      )
+        return
+
       const message = {
         from:
           session.user?.email ??
@@ -67,9 +73,7 @@ export const actions = {
 
       await sendEmail(message)
 
-      return {
-        success: 'Email is sent',
-      }
+      redirect(200, '/report/success')
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error(error)
