@@ -42,14 +42,20 @@
         method="POST"
         on:submit="{(e) => {
           if (
-            isExistCookie(
-              'isSuccess'
-            ) ||
+            isExistCookie('isSuccess')
+          ) {
+            e.preventDefault()
+            window.location.href =
+              window.location.href +
+              '/success'
+          }
+          if (
             message.length < 5 ||
             title.length < 5
-          )
+          ) {
             e.preventDefault()
-          else
+            alert('장난 치지 마세요.')
+          } else
             document.cookie =
               'isSuccess=true; max-age=5'
         }}"
