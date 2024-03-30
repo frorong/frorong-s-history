@@ -11,6 +11,7 @@
     MAIN = '/',
     ABOUT = '/about',
     BLOG = '/blog',
+    REPORT = '/report',
   }
 </script>
 
@@ -32,6 +33,11 @@
     href="{PATHS.ABOUT}"
     class="{`${path === PATHS.ABOUT && 'font-bold text-blue-700'} text-xl`}"
     >About</a
+  >
+  <a
+    href="{PATHS.REPORT}"
+    class="{`${path === PATHS.REPORT && 'font-bold text-blue-700'} text-xl`}"
+    >Report</a
   >
 </nav>
 
