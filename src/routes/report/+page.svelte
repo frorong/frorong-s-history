@@ -76,6 +76,18 @@
         >
           전송
         </button>
+        <input
+          name="userName"
+          value="{$page.data.session
+            .user}"
+          disabled
+        />
+        <input
+          name="userEmail"
+          value="{$page.data.session
+            .user?.email}"
+          disabled
+        />
       </form>
     </div>
   {:else}

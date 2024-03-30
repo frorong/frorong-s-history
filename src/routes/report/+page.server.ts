@@ -16,19 +16,21 @@ import transporter from '$lib/emailSetup.server.js'
 export const actions = {
   default: async ({
     request,
-    locals,
   }: {
     request: any
-    locals: any
   }) => {
-    const session = await locals.auth()
     try {
       const formData =
         await request.formData()
       const subject =
         formData.get('subject')
+      const email = formData.get(
+        'userEmail'
+      )
+      const name =
+        formData.get('userName')
       const body = formData.get('body')
-      let html = `<h2>문의가 도착했습니다.</h2><pre>${body}</pre>`
+      let html = `<h2>문의가 도착했습니다.</h2><pre>${body}</pre><span>보낸이 : ${name}, 이메일 : ${email}</span>`
 
       if (
         body.length < 5 ||
@@ -37,13 +39,11 @@ export const actions = {
         return
 
       const message = {
-        from:
-          session.user?.email ??
-          GOOGLE_EMAIL,
+        from: email ?? GOOGLE_EMAIL,
         to: 'frorong0727@gmail.com',
         bcc: 'https://www.frorong.shop',
         subject: subject,
-        text: body + session.user.name,
+        text: body,
         html: html,
       }
 
