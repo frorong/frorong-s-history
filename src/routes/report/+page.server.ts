@@ -16,9 +16,12 @@ import transporter from '$lib/emailSetup.server.js'
 export const actions = {
   default: async ({
     request,
+    locals,
   }: {
     request: any
+    locals: any
   }) => {
+    const session = await locals.auth()
     try {
       const formData =
         await request.formData()
@@ -28,7 +31,9 @@ export const actions = {
       let html = `<h2>문의가 도착했습니다.</h2><pre>${body}</pre>`
 
       const message = {
-        from: GOOGLE_EMAIL,
+        from:
+          session.user?.email ??
+          GOOGLE_EMAIL,
         to: 'frorong0727@gmail.com',
         bcc: 'https://www.frorong.shop',
         subject: subject,
