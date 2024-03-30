@@ -24,13 +24,6 @@
       event.target as HTMLInputElement
     title = target.value
   }
-
-  const handleSubmit = () => {
-    console.log(
-      '전송된 메시지:',
-      message
-    )
-  }
 </script>
 
 <section>
@@ -63,7 +56,6 @@
         ></textarea>
         <button
           class="mt-2 rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-          on:click="{handleSubmit}"
           type="submit"
         >
           전송

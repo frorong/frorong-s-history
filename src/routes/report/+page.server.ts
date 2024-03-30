@@ -25,8 +25,6 @@ export const actions = {
       const subject =
         formData.get('subject')
       const body = formData.get('body')
-      // eslint-disable-next-line no-console
-      console.log(body)
       let html = `<h2>문의가 도착했습니다.</h2><pre>${body}</pre>`
 
       const message = {
