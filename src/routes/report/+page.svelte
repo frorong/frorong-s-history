@@ -54,10 +54,15 @@
             isExistCookie('isSuccess')
           ) {
             e.preventDefault()
+            alert('test')
             window.location.href =
               window.location.href +
               '/success'
           }
+          console.log(
+            isExistCookie('isSuccess'),
+            name
+          )
           if (
             message.length < 5 ||
             title.length < 5
@@ -85,24 +90,24 @@
           bind:value="{message}"
           on:input="{handleMessageInput}"
         ></textarea>
+        <input
+          name="userName"
+          bind:value="{name}"
+          type="text"
+          class="opacity-0"
+        />
+        <input
+          bind:value="{email}"
+          type="text"
+          name="userEmail"
+          class="opacity-0"
+        />
         <button
           class="mt-2 rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
           type="submit"
         >
           전송
         </button>
-        <input
-          name="userName"
-          bind:value="{name}"
-          disabled
-          class="opacity-0"
-        />
-        <input
-          bind:value="{email}"
-          name="userEmail"
-          class="opacity-0"
-          disabled
-        />
       </form>
     </div>
   {:else}
