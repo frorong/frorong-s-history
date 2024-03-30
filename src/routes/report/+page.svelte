@@ -2,6 +2,7 @@
   export let data
   import { page } from '$app/stores'
 
+  export let form
   import { signIn } from '@auth/sveltekit/client'
   import GithubLoginButton from '@components/githubLoginButton.svelte'
 
@@ -39,26 +40,32 @@
     문의하기
   </h1>
 
-  <input
-    type="text"
-    class="mb-4 w-full rounded-md border p-2"
-    placeholder="제목을 입력해주세요."
-    bind:value="{title}"
-    on:input="{handleTitleInput}"
-  />
-  <textarea
-    class="w-full rounded-md border p-2"
-    rows="5"
-    placeholder="문의 내용을 입력해주세요."
-    bind:value="{message}"
-    on:input="{handleMessageInput}"
-  ></textarea>
-  <button
-    class="mt-2 rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-    on:click="{handleSubmit}"
-  >
-    전송
-  </button>
+  <form method="POST">
+    <input
+      name="subject"
+      type="text"
+      class="mb-4 w-full rounded-md border p-2"
+      placeholder="제목을 입력해주세요."
+      bind:value="{title}"
+      on:input="{handleTitleInput}"
+    />
+    <textarea
+      name="body"
+      class="w-full rounded-md border p-2"
+      rows="5"
+      placeholder="문의 내용을 입력해주세요."
+      bind:value="{message}"
+      on:input="{handleMessageInput}"
+    ></textarea>
+    <button
+      class="mt-2 rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+      on:click="{handleSubmit}"
+      type="submit"
+    >
+      전송
+    </button>
+  </form>
+
   {#if $page.data.session}
     <div
       class="flex items-center space-x-4"
