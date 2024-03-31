@@ -1,12 +1,18 @@
 {
-  "plugins": ["eslint-plugin-svelte3"],
   "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "parser": "svelte-eslint-parser",
+    },
+  ],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
     },
+    "extraFileExtensions": [".svelte"],
   },
   "rules": {
     "semi": "off",
@@ -17,4 +23,7 @@
     "no-console": "error",
     "no-unused-vars": "error",
   },
+  "extends": [
+    "plugin:svelte/recommended",
+  ],
 }
