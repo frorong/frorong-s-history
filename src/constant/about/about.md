@@ -2,12 +2,8 @@
 
 ## 저는 프로덕트로 많은 사람들의 삶에 긍정적인 영향을 미치고 싶다는 야망이 있습니다.
 
-**학교 입학지원 서비스 및 학교 홈페이지의 기존 문제를 개선하여, 현재까지 도합 7,000+명의 사용자가 유입되었습니다. 꾸준히 유저 피드백을 받아 서비스를 확장 및 개선시키고 있습니다.**
-
-## 저는 기술적인 진보와 꾸준하고 폭발적인 성장을 원합니다.
-
-**11+개월 동안 매주 스터디를 통해 팀원들과 프론트엔드 기술에 관련하여 토의했습니다.
-매일 꾸준히 코딩 테스트 문제에 도전하여, 현재까지 360+개의 문제를 해결했습니다.**
+학교 입학지원 서비스 및 학교 홈페이지의 기존 문제를 개선하고, 동문간 네트워크 서비스를 개발하여 현재까지 도합 **9,200+명의 사용자가 유입**되었습니다. 꾸준히 유저 피드백을 받아 서비스를 확장 및 개선시키고 있습니다.
+학교 입학지원 서비스로 외주를 통해 운영되던 입학 프로세스를 인하우스 전환하여 약 **16,000,000원의 비용을 절감**했습니다.
 
 <br/>
 
@@ -27,6 +23,35 @@
 
 # Work Experience.
 
+## EveryGSM - 프론트엔드 개발
+
+**2023.03 ~ 현재**
+<br/>
+
+EveryGSM은 광주소프트웨어마이스터고등학교 프로젝트 링킹 서비스입니다.
+<br/>
+
+운영하는 서비스들을 링킹하는 Hub의 역할을 합니다. 교내 서비스를 한눈에 파악할 수 있어 학교 홍보 목적으로도 활용됩니다.
+
+<br/>
+
+-프로젝트 구조 세팅초기 NextJS AppRouter + YarnPnP로 세팅하였으나, AppRouter를 활성화하고 YarnPnP를 사용할 경우 빌드가 실패되는 문제가 있었습니다. (최신 next 버전에서는 정상) 때문에 AppRouter와 사용이 가능하면서 속도 측면이나 디스크 용량 측면에서 유리한 pnpm으로 마이그레이션 하였습니다. <br/>
+**→ JS 번들 사이즈 84.3kb → 68.6kb 약 19% 감소**
+<br/>
+
+-메인 페이지 개발  
+ 전체 UI의 레이아웃을 제작하고 emotion의 theme를 사용하여 유연하게 전환이 가능한 다크 모드를 구현했습니다.
+추후 유지 보수에서 전체적인 코드와 반응형 동작 품질 개선기존에는 window width에 따라 동적으로 변하는 카드 슬라이더의 복잡한 코드를 간소화하여, 각 width에 맞는 모양의 컴포넌트를 분리하고 렌더링함으로써 코드의 가독성과 추상화 정도를 향상시켰습니다.[슬라이더 코드 개선 PR 바로가기](https://github.com/themoment-team/EveryGSM-client/pull/42) | [슬라이드 컨트롤러 개선 PR 바로가기](https://github.com/themoment-team/EveryGSM-client/pull/52) | [개선 경험을 담은 블로그 바로가기](https://frorong.tistory.com/entry/React-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A5%BC-%EC%9E%98-%EC%84%A4%EA%B3%84%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%B4%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EC%95%BC-%ED%95%A0-%EA%B2%83)
+
+<br/>
+
+-storybook 도입  
+ 기존 코드는 컴포넌트의 독립성이 떨어져서 storybook을 도입하고 컴포넌트가 단일 책임을 갖도록 리팩토링하였습니다.
+
+<br/>
+
+---
+
 ## Hello, GSM - 프론트엔드 개발
 
 **2022.04 ~ 현재**
@@ -37,7 +62,7 @@ Hello, GSM은 광주소프트웨어마이스터고등학교 입학 지원 시스
 
 Hello, GSM은 빠른 합격 결과 확인과 편리한 입학 프로세스를 제공합니다.  
 2024 신입생 모집 기간 동안 **700+**명, 총 **4000+**명의 사용자가 접속하였습니다.  
-3년째 학교와 계약하여 신입생을 받으며 유지보수 되고 있는 서비스입니다.
+Hello, GSM이 기존에 외주로 맡겨지던 입학 프로세스를 대체하여 약 **1600만원의 비용을 절감하였습니다.**
 
 <br/>
 
@@ -58,6 +83,44 @@ Hello, GSM은 빠른 합격 결과 확인과 편리한 입학 프로세스를 �
 <br/>
 
 -사용자 피드백과 QA를 통해 기존에 있었던 문제를 찾아내고 이를 개선, 해결
+
+<br/>
+
+---
+
+## GSM Networking - 프론트엔드 개발
+
+**2023.10 ~ 현재**
+
+GSM Networking은 광주소프트웨어마이스터고등학교의 사이버 동문입니다.
+
+<br/>
+
+광주소프트웨어마이스터고등학교는 8기까지 진행중인 학교입니다. 하지만 아직 동문회가 존재하지 않아 교장선생님과, 취업진로부의 사업으로 사이버 동문 커뮤니티를 개발했습니다.
+<br/>
+1200+명의 사용자가 접속하였으며, 서비스 내에 등록된 120+명의 멘토가 존재합니다.  
+서비스 내의 익명 커뮤니티 기능을 통해 꾸준히 사용자 피드백을 받아 개선하고 있습니다.
+
+[릴리즈 내역 바로가기](https://github.com/themoment-team/GSM-Networking-front/releases)
+
+<br/>
+
+-익명 서비스 게시글 업로드 기능 개발  
+입력된 텍스트 길이에 따라 동적으로 크기가 변경되는 TextArea를 만들었습니다. [해당 코드 PR 바로가기](https://github.com/themoment-team/GSM-Networking-front/pull/60)
+<br/>
+
+-재귀 컴포넌트를 사용한 대댓글 기능 제작 대댓글 기능을 어떻게 구현할 수 있을지 고민하다 재귀 컴포넌트를 생각해냈습니다. 댓글 컴포넌트가 자신을 호출하며 대댓글 기능이 동작합니다. [해당 코드 PR 바로가기](https://github.com/themoment-team/GSM-Networking-front/pull/107)
+
+-게시물 상세 페이지 제작 server side에서 initial data를 fetching하여 react query에 적용합니다. [해당 코드 PR 바로가기](https://github.com/themoment-team/GSM-Networking-front/pull/116)
+
+-내 정보 수정 기능 개발
+멘토들의 커리어 수정 기능을 요청하는 피드백을 받고, 내 정보 수정 기능을 개발했습니다.[내 정보 수정 기능 PR 바로가기](https://github.com/themoment-team/GSM-Networking-front/pull/81) | [멘토 정보 수정 API 연동 PR 바로가기](https://github.com/themoment-team/GSM-Networking-front/pull/85)
+
+- jest를 사용한 테스트 코드 작성
+
+<br/>
+-마이 페이지를 비롯한 여러 UI 제작유저 role에 따라 다른 UI를 보여줄 수 있도록 제작했습니다.
+<br/>
 
 <br/>
 
@@ -91,67 +154,6 @@ react query의 캐싱으로 불필요한 요청을 줄여 렌더링 또한 줄�
 
 -게시물 삭제 기능 개발  
 삭제 로직을 react-custom-hook으로 래핑 하여 코드를 분리, 모듈화하여 재사용성을 높였습니다.
-
-<br/>
-
----
-
-## EveryGSM - 프론트엔드 개발
-
-**2023.03 ~ 현재**
-<br/>
-
-EveryGSM은 광주소프트웨어마이스터고등학교 프로젝트 링킹 서비스입니다.
-<br/>
-
-운영하는 서비스들을 링킹하는 Hub의 역할을 합니다. 교내 서비스를 한눈에 파악할 수 있어 학교 홍보 목적으로도 활용됩니다.
-
-<br/>
-
--프로젝트 구조 세팅  
-초기 NextJS AppRouter + YarnPnP로 세팅하였으나 AppRouter를 활성화하고 YarnPnP를 사용할 경우 빌드가 실패되는 문제가 있었습니다. 때문에 AppRouter와 사용이 가능하면서 속도 측면이나 디스크 용량 측면에서 유리한 pnpm으로 마이그레이션 하였습니다.
-<br/>
-
--메인 페이지 개발  
- 전체 UI의 레이아웃을 제작하고 emotion의 theme를 사용하여 유연하게 전환이 가능한 다크 모드를 구현했습니다.
-추후 유지 보수에서 전체적인 코드와 반응형 동작 품질 개선 기존에는 window width에 따라 동적으로 변하는 카드 슬라이더의 복잡한 코드를 간소화하여, 각 width에 맞는 모양의 컴포넌트를 분리하고 렌더링함으로써 코드의 가독성과 추상화 정도를 향상시켰습니다. [슬라이더 코드 개선 PR 바로가기](https://github.com/themoment-team/EveryGSM-client/pull/42) | [슬라이드 컨트롤러 개선 PR 바로가기](https://github.com/themoment-team/EveryGSM-client/pull/52) | [개선 경험을 담은 블로그 바로가기](https://frorong.tistory.com/entry/React-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A5%BC-%EC%9E%98-%EC%84%A4%EA%B3%84%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%B4%EC%84%9C-%EC%83%9D%EA%B0%81%ED%95%B4%EC%95%BC-%ED%95%A0-%EA%B2%83)
-
-<br/>
-
--storybook 도입  
- 기존 코드는 컴포넌트의 독립성이 떨어져서 storybook을 도입하고 컴포넌트가 단일 책임을 갖도록 리팩토링하였습니다.
-
-<br/>
-
----
-
-## GSM Networking - 프론트엔드 개발
-
-**2023.10 ~ 현재**
-
-GSM Networking은 광주소프트웨어마이스터고등학교의 사이버 동문입니다.
-
-<br/>
-
-광주소프트웨어마이스터고등학교는 8기까지 진행중인 학교입니다. 하지만 아직 동문회가 존재하지 않아 교장선생님과, 취업진로부의 사업으로 사이버 동문 커뮤니티를 개발했습니다.
-<br/>
-1200+명의 사용자가 접속하였으며, 서비스 내에 등록된 120+명의 멘토가 존재합니다.  
-서비스 내의 익명 커뮤니티 기능을 통해 꾸준히 사용자 피드백을 받아 개선하고 있습니다.
-
-[릴리즈 내역 바로가기](https://github.com/themoment-team/GSM-Networking-front/releases)
-
-<br/>
-
--익명 서비스 게시글 업로드 기능 개발  
-입력된 텍스트 길이에 따라 동적으로 크기가 변경되는 TextArea를 만들었습니다. [해당 코드 PR 바로가기](https://github.com/themoment-team/GSM-Networking-front/pull/60)
-<br/>
-
--내 정보 수정 기능 개발
-멘토들의 커리어 수정 기능을 요청하는 피드백을 받고, 내 정보 수정 기능을 개발했습니다. [내 정보 수정 기능 PR 바로가기](https://github.com/themoment-team/GSM-Networking-front/pull/81) | [멘토 정보 수정 API 연동 PR 바로가기](https://github.com/themoment-team/GSM-Networking-front/pull/85)
-
-<br/>
--마이 페이지를 비롯한 여러 UI 제작 유저 role에 따라 다른 UI를 보여줄 수 있도록 제작했습니다.
-<br/>
 
 <br/>
 
